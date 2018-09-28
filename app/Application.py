@@ -11,10 +11,11 @@ app.register_blueprint(group_list_request, url_prefix="/group_list")
 app.register_blueprint(todo_request, url_prefix="/todo")
 
 
-@app.route("/")
-def hello_rollcall():
-    return "Hello RollCall User"
-
 if __name__ == '__main__':
     database.db_init()
     app.run()
+
+
+@app.route("/")
+def hello_rollcall():
+    return "Hello RollCall User"

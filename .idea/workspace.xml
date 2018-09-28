@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3513e4c9-2a39-4525-bdfe-31a651bc8f6d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/group_list_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/todomanager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/entity/grouplist_entity.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/entity/todo_entity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Application.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/account_entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/entity/account_entity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/accountmanager.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/accountmanager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-    </list>
+    <list default="true" id="3513e4c9-2a39-4525-bdfe-31a651bc8f6d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -118,7 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1675" />
@@ -264,7 +254,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1675" height="944" extended-state="6" />
+    <frame x="1" y="23" width="1675" height="944" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14812575" />
@@ -651,7 +641,7 @@
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
         </state>
       </provider>
     </entry>

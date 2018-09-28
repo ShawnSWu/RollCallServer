@@ -7,7 +7,6 @@ app = Flask(__name__)
 app.config.from_object(config)
 db = SQLAlchemy(app)
 
-from app.account_entity import AccountEntity
 
 def db_init():
     db.create_all()

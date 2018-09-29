@@ -1,5 +1,5 @@
 # API
-__***https://{hostname}/account***__ <br>
+__***https://{hostname}/group_list***__ <br>
  The hostname depends on Heroku
 
 

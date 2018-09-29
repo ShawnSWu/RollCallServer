@@ -1,5 +1,5 @@
 # API
- hostname/account
+ https://{hostname}/account
  The hostname depends on Heroku
 
 ## sign up

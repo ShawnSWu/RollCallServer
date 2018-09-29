@@ -1,6 +1,5 @@
 # API
- https://{hostname}/account  
- 
+__***https://{hostname}/account***__ <br>
  The hostname depends on Heroku
 
 ## sign up
@@ -30,3 +29,5 @@ or
 ```
 repeat account
 ```
+
+

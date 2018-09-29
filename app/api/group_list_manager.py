@@ -8,15 +8,18 @@ from app.database import db
 
 group_list_request = Blueprint('group_list_request', __name__)
 
+
 # @list_Request.route("/getlistdata", methods=['POST'])
-@group_list_request.route("/device/list", methods=['Post'])
-def get_list_data():
-    json_data = request.get_json()
-    account = json_data.get('account')
-    group_name = json_data.get('group_name')
+@group_list_request.route("/device/list/<account>/<group_name>", methods=['GET'])
+def get_list_data(account, group_name):
     data_list = db.session.query(Grouplist_entity.listkey,Grouplist_entity.listvalue)\
         .filter(Grouplist_entity.account == account).filter(Grouplist_entity.listname == group_name).all()
-    return json.dumps(data_list, ensure_ascii=False)
+    return_json_dict = dict()
+    for data in data_list:
+        list_key = data[0]
+        list_value = data[1]
+        return_json_dict[list_key] = list_value
+    return json.dumps(return_json_dict, ensure_ascii=False)
 
 
 def __auth_if_repeat_list(account, new_group_name):
@@ -41,6 +44,9 @@ def insert_newData_to_oldList():
 
     list_value = list_value.replace("'", " ")
     list_value = list_value.replace(";", " ")
+    # if insert_type != "extra_add":
+    #     # another new_add,change_add 都一樣 先刪除 在全部加入
+    #     __delete_list_data(account, list_name)
     db_execute_status =True
     try:
         grouplist_entity = Grouplist_entity(account=account, listname=list_name, listkey=list_key, listvalue=list_value,
@@ -59,6 +65,7 @@ def __delete_list_data(account, group_name):
     if check_result is not None:
         db.session.delete(check_result)
         db.session.commit()
+
 
 # @list_Request.route("/getalllistdata", methods=['POST'])
 @group_list_request.route("/info/<account>", methods=['GET'])
@@ -134,7 +141,7 @@ def get_all_list_name(account):
 
 
 # @list_Request.route("/getsomegrouplistdata", methods=['POST'])
-@group_list_request.route("/group/<account>/<group_name>", methods=['GET'])
+@group_list_request.route("/info/<account>/<group_name>", methods=['GET'])
 def get_somegroup_list_data(account, group_name):
     all_group_name_list = db.session.query((func.count('*') - 1), Grouplist_entity.group_image_uri) \
         .filter(Grouplist_entity.account == account).group_by('listname').all()

@@ -50,7 +50,7 @@ def finsh_todo():
     return json.dumps(True, ensure_ascii=False)
 
 
-@todo_request.route("/content", methods=['PATCH'])
+@todo_request.route("/content", methods=['PUT'])
 def update_todo_content():
     json_data = request.get_json()
     account = json_data.get('account')
